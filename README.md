@@ -10,12 +10,6 @@ A project that demonstrates the integration of Playwright with Tesseract OCR for
 - Docker support for consistent test execution
 - GitHub Actions integration for CI/CD
 
-## Prerequisites
-
-- Node.js (v20 or later)
-- npm (v10 or later)
-- Docker (for running tests in a containerized environment)
-
 ## Installation
 
 1. Clone the repository:
