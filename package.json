@@ -1,0 +1,31 @@
+{
+  "name": "playwright-tesseract",
+  "version": "1.0.0",
+  "description": "Playwright tests with Tesseract OCR for canvas elements",
+  "main": "app.js",
+  "scripts": {
+    "start": "http-server -p 3000",
+    "test": "playwright test",
+    "test:ocr": "playwright test canvas.test.ts",
+    "test:image": "playwright test image-comparison.spec.ts",
+    "test:image:update": "playwright test image-comparison.spec.ts --update-snapshots"
+  },
+  "keywords": [
+    "playwright",
+    "tesseract",
+    "ocr",
+    "canvas",
+    "cytoscape"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cytoscape": "^3.28.1",
+    "http-server": "^14.1.1"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.53.0",
+    "tesseract.js": "^6.0.1",
+    "is-electron": "^2.2.2"
+  }
+}
