@@ -118,17 +118,16 @@ Located in `tests/image-comparison.spec.ts`, these tests ensure visual consisten
 sequenceDiagram
     participant PB as Playwright Browser
     participant C as Canvas
-    participant P as PNG Screenshot
     participant T as Tesseract OCR
-    participant TC as Text Check
+    participant PT as Playwright Test
 
     PB->>C: Render Graph
     Note over C: Wait for ANIMATION_TIMEOUT
-    PB->>P: Take Screenshot
-    P->>T: Process Image
-    Note over T: Apply charWhitelist
-    T->>TC: Extract Text
-    TC->>TC: Verify Text Content
+    PB->>T: Capture & Send Canvas Screenshot
+    Note over T: Process with charWhitelist
+    T->>PT: Return Extracted Text
+    PT->>PT: Verify Text Content
+    Note over PT: Assert Node/Edge Labels
 ```
 
 The OCR testing process follows these steps:
